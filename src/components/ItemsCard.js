@@ -2,11 +2,11 @@ const ItemCard = (item) => {
   const { name, description, price, url } = item;
 
   return (
-    <div>
-      <img src={url} alt={name} />
-      <h3>{name}</h3>
-      <p>{price}</p>
-      <p>{description}</p>
+    <div className="card">
+      <img src={url} alt={name} className="image" />
+      <h3 className="name">{name}</h3>
+      <p className="price">{price}</p>
+      <p className="description">{description}</p>
     </div>
   );
 };

@@ -3,10 +3,12 @@ import ItemCard from "./ItemsCard";
 
 const ItemsPage = () => {
   return (
-    <div>
-      {items.map((item, idx) => (
-        <ItemCard key={idx} {...item} />
-      ))}
+    <div className="container">
+      <div className="grid_container">
+        {items.map((item, idx) => (
+          <ItemCard key={idx} {...item} />
+        ))}
+      </div>
     </div>
   );
 };
