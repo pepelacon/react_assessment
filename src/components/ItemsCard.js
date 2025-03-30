@@ -16,10 +16,16 @@ const ItemCard = (item) => {
     <div className="card">
       <img src={url} alt={name} className="image" />
       <h3 className="name">{name}</h3>
-      <p className="price">{price}</p>
-      <p className="description">{description}</p>
-      <button onClick={toggleVisible}>Details</button>
-      <button onClick={handleAddCard}>Add to card</button>
+      <p className="price">${price}</p>
+      {isVisible && <p className="description">{description}</p>}
+      <div>
+        <button onClick={toggleVisible} className="toggle_button">
+          {isVisible ? "Hide details" : "Show details"}
+        </button>
+        <button onClick={handleAddCard} className="add_to_card">
+          Add to card
+        </button>
+      </div>
     </div>
   );
 };
